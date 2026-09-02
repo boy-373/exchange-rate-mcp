@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.boy-373/exchange-rate-mcp",
+  "title": "Exchange Rate MCP",
+  "description": "MCP server for live currency exchange rates and amount conversion, with Chinese/English currency name normalization (ECB reference rates via Frankfurter, er-api.com fallback).",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/boy-373/exchange-rate-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.pianam.cn/exchange-mcp/mcp"
+    }
+  ]
+}
