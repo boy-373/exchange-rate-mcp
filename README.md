@@ -116,3 +116,15 @@ python exchange_mcp_server.py
 ## 📄 License
 
 [MIT](LICENSE) © 2026 boy-373
+
+## Install via Smithery
+
+One-click install for [Smithery](https://smithery.ai)-supported clients (Claude Desktop, Cursor, etc.):
+
+[![Smithery](https://smithery.ai/badge/1561852680/exchange-rate-mcp)](https://smithery.ai/servers/1561852680/exchange-rate-mcp)
+
+Or run:
+
+```bash
+npx -y @smithery/cli install 1561852680/exchange-rate-mcp --client claude
+```
