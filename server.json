@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.boy-373/exchange-rate-mcp",
+  "name": "cn.pianam.mcp/exchange-rate-mcp",
   "title": "Exchange Rate MCP",
   "description": "MCP server for live currency exchange rates and conversion, ISO codes and Chinese currency names.",
   "version": "1.0.0",
