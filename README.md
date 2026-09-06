@@ -46,7 +46,7 @@ Add this to your MCP client's `mcpServers` configuration (Claude Desktop `claude
 - Primary source: **[Frankfurter](https://frankfurter.dev/)** — European Central Bank (ECB) daily reference rates, free, no API key.
 - Automatic fallback: **[open.er-api.com](https://www.exchange-api.com/)** if the primary source fails.
 - 32 currencies with Chinese display names (人民币, 美元, 欧元, 日元, 港币, 韩元, 新台币 …) and Chinese aliases (美金/美刀, 港元, 台币, 澳币 …).
-- Rates cached for **2 hours** (ECB updates on working days); hosted endpoint rate-limited to **60 requests / minute / IP**.
+- Rates cached for **2 hours** (ECB updates on working days); hosted endpoint rate-limited to **200 requests / minute / IP**.
 
 ## 🐢 Self-hosting
 
@@ -69,7 +69,7 @@ No API keys or accounts are ever required.
 ## 🗂️ Files
 
 - `exchange_mcp_server.py` — the MCP server (FastMCP, Streamable HTTP transport).
-- `rate_limit.py` — lightweight per-IP sliding-window rate-limit middleware (60 req/min default).
+- `rate_limit.py` — lightweight per-IP sliding-window rate-limit middleware (200 req/min default).
 - `requirements.txt` — `mcp`, `uvicorn`, `starlette`.
 - `server.json` — official MCP Registry manifest (remote server entry, ready to publish with `mcp-publisher`).
 - `smithery.yaml` / `glama.json` — directory listing metadata.
@@ -101,7 +101,7 @@ No API keys or accounts are ever required.
 - 主数据源 Frankfurter（欧洲央行 ECB 每日参考汇率，免费无需 Key），故障自动切换 open.er-api.com。
 - 参考汇率每日更新，非实时交易牌价，实际换汇以银行柜台为准。
 
-**服务特性**：数据源全部为公开接口、无需注册/付费；服务端内存缓存、失败自动降级/切换备用通道；单 IP 限流 60 次/分钟。
+**服务特性**：数据源全部为公开接口、无需注册/付费；服务端内存缓存、失败自动降级/切换备用通道；单 IP 限流 200 次/分钟。
 
 **本地部署**：
 
