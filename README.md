@@ -66,6 +66,14 @@ No API keys or accounts are ever required.
 
 ### 🐳 Self-host with Docker
 
+**Option A — pull the pre-built image (fastest, no build):**
+
+```bash
+docker run -d -p 8000:8000 --name exchange-rate-mcp ghcr.io/boy-373/exchange-rate-mcp:latest
+```
+
+**Option B — build from source:**
+
 ```bash
 git clone https://github.com/boy-373/exchange-rate-mcp.git
 cd exchange-rate-mcp
@@ -130,6 +138,10 @@ python exchange_mcp_server.py
 **Docker 自托管**：
 
 ```bash
+# 方式一：直接拉预构建镜像（最快，无需构建）
+docker run -d -p 8000:8000 --name exchange-rate-mcp ghcr.io/boy-373/exchange-rate-mcp:latest
+
+# 方式二：从源码构建
 git clone https://github.com/boy-373/exchange-rate-mcp.git && cd exchange-rate-mcp
 docker build -t exchange-rate-mcp .
 docker run -d -p 8000:8000 --name exchange-rate-mcp exchange-rate-mcp
